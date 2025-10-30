@@ -9,12 +9,8 @@ if [[ "$answer" == "y" || "$answer" == "Y" ]]; then
 	sudo timeshift --create --yes
 fi
 
+./essentials.sh
+
 sudo pacman -Sy --noconfirm sway swaybg swayidle swaylock waybar rofi dunst
 
-sudo pacman -Sy git yay
-
 sudo pacman -Sy light blueman pavucontrol network-manager-applet
-
-sudo pacman -Sy fonts-font-awesome
-
-sudo pacman -Sy neovim node nvm
