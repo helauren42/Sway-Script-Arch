@@ -1,6 +1,8 @@
+source ./utils.sh
+
 # Create backup
 
-sudo pacman -S --noconfirm timeshift
+paci timeshift
 
 echo "Do you want to create a backup of your current state? (y/n)"
 read answer
@@ -11,6 +13,36 @@ fi
 
 ./essentials.sh
 
-sudo pacman -Sy --noconfirm sway swaybg swayidle swaylock waybar rofi dunst
+# Sway
 
-sudo pacman -Sy light blueman pavucontrol network-manager-applet
+paci sway swayidle swaylock wlogout waybar
+
+paci light blueman pavucontrol network-manager-applet rofi
+
+# MangoWC
+
+yayi mangowc-git
+
+# dunst notifications
+paci dunst
+
+### Files
+
+# gui file manager
+paci nemo
+
+# cli file manager
+paci yazi
+
+# pdf zathura
+paci zathura
+
+# video player clapper
+paci gst-libav
+paci clapper
+
+# music player
+paci elisa
+
+### Desktop
+paci swaybg waypaper mpvpaper

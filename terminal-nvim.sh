@@ -1,4 +1,6 @@
-sudo pacman -Sy fonts-font-awesome zsh zsh-autosuggestions pfetch
+#!/bin/bash
+
+paci ttf-font-awesome zsh zsh-autosuggestions pfetch fzf ripgrep fd
 
 cp -r ./fonts/ ~/.local/share/fonts
 fc-cache -fv
@@ -8,9 +10,9 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.powerlevel10
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
 
 # wezterm
-sudo pacman -Sy wezterm
+paci wezterm
 cp ./configs/wezterm/ ~/.config/
-sudo pacman -Sy wl-clipboard
+paci wl-clipboard
 
 #nvim
-sudo pacman -Sy neovim
+paci neovim
